@@ -1,0 +1,65 @@
+sg0440@cse03:~/4430/HW5/04$ gcl
+GCL (GNU Common Lisp)  2.6.7 CLtL1    Feb  1 2012 09:07:26
+Source License: LGPL(gcl,gmp), GPL(unexec,bfd,xgcl)
+Binary License:  GPL due to GPL'ed components: (XGCL READLINE UNEXEC)
+Modifications of this banner must retain notice of a compatible license
+Dedicated to the memory of W. Schelter
+
+Use (help) to get some basic information on how to use GCL.
+Temporary directory for compiler files set to /tmp/
+
+>(load "1a")
+
+Loading 1a.lsp
+Finished loading 1a.lsp
+T
+
+>(hextodec '(a))
+
+10
+
+>(hextodec '(1 f))
+
+31
+
+>(hextodec '(5 a 6 b 7 c 8 d 9 e))
+
+388350381470
+
+>(load "1b")
+
+Loading 1b.lsp
+Finished loading 1b.lsp
+T
+
+>(perfect 6)
+
+(1 2 3)
+
+>(perfect 298)
+
+NIL
+
+>(perfect 496)
+
+(1 2 4 8 16 31 62 124 248)
+
+>(load "1c")
+
+Loading 1c.lsp
+Warning: DELETE is being redefined.
+Finished loading 1c.lsp
+T
+
+>(delete 'a '(a b r a c a d a b r a))
+
+(B R C D B R)
+
+>(delete 'b '(no bs here))
+
+(NO BS HERE)
+
+>(delete 'nest '(nest (second nest level) (third (nest) level) (((big nest)))))
+
+((SECOND LEVEL) (THIRD NIL LEVEL) (((BIG))))
+

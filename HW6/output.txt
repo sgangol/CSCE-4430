@@ -1,0 +1,365 @@
+sg0440@cse02:~/4430/HW6/03$ gprolog
+GNU Prolog 1.3.0
+By Daniel Diaz
+Copyright (C) 1999-2007 Daniel Diaz
+| ?- consult('01').
+compiling /home/sg0440/4430/HW6/03/01.pro for byte code...
+/home/sg0440/4430/HW6/03/01.pro:4: warning: singleton variables [M] for expt/3
+/home/sg0440/4430/HW6/03/01.pro compiled, 4 lines read - 910 bytes written, 5
+
+yes
+| ?- expt(10,0,E).
+
+E = 1 ? ;
+
+no
+| ?- expt(3,4,E).
+
+E = 81 ? ;
+
+no
+| ?- expt(-10,6,E).
+
+E = 1000000 ? ;
+
+no
+| ?-
+
+| ?- consult('02').
+compiling /home/sg0440/4430/HW6/03/02.pro for byte code...
+/home/sg0440/4430/HW6/03/02.pro compiled, 18 lines read - 2052 bytes written, 6 ms
+
+yes
+| ?- hextodec([a],D).
+
+D = 10 ? ;
+| ?- hextodec([1,f],D).
+
+D = 31 ? ;
+| ?- hextodec([5,a,6,b,7,c,8,d,9,e],D).
+
+
+| ?- consult('03').
+compiling /home/sg0440/4430/HW6/03/03.pro for byte code...
+/home/sg0440/4430/HW6/03/03.pro:15: warning: singleton variables [N] for perfect/2
+/home/sg0440/4430/HW6/03/03.pro:23: warning: singleton variables [N] for factors/3
+/home/sg0440/4430/HW6/03/03.pro compiled, 40 lines read - 3871 bytes written, 6 ms
+
+yes
+| ?- perfect(6,Factors).
+
+Factors = [1,2,3] ? ;
+
+Factors = nil
+
+yes
+| ?- perfect(298, Factors).
+
+Factors = nil
+
+yes
+| ?- perfect(496, Factors).
+
+Factors = [1,2,4,8,16,31,62,124,248] ? ;
+
+Factors = nil
+
+(4 ms) yes
+
+| ?- consult('04').
+compiling /home/sg0440/4430/HW6/03/04.pro for byte code...
+/home/sg0440/4430/HW6/03/04.pro:6: warning: singleton variables [Atom] for delet                                                                                             eAtom/3
+/home/sg0440/4430/HW6/03/04.pro compiled, 12 lines read - 1761 bytes written, 5                                                                                              ms
+
+yes
+| ?- deleteAtom(b, [no, bs, here], List).
+
+List = [no,bs,here] ? ;
+
+no
+| ?- deleteAtom(a, [a, b, r, a, c, a, d, a, b, r, a], List).
+
+List = [b,r,c,d,b,r] ? ;
+
+no
+
+| ?- deleteAtom(nest, [nest, [second, nest, level], [third, [nest], level],[[[big, nest]]]], List).
+
+List = [[second,level],[third,[],level],[[[big]]]] ? ;
+
+no
+| ?-
+
+
+
+
+
+-----------------------------------------------------------------------------
+ColorBoxes.java
+-----------------------------------------------------------------------------
+
+sg0440@cse02:~/4430/HW6/03$ javac ColorBoxes.java
+sg0440@cse02:~/4430/HW6/03$ java ColorBoxes
+Thread ID: 11 Time Elapsed: 500
+Thread ID: 15 Time Elapsed: 501
+Thread ID: 16 Time Elapsed: 500
+Thread ID: 14 Time Elapsed: 500
+Thread ID: 13 Time Elapsed: 500
+Thread ID: 12 Time Elapsed: 500
+Thread ID: 19 Time Elapsed: 500
+Thread ID: 18 Time Elapsed: 500
+Thread ID: 17 Time Elapsed: 500
+Thread ID: 21 Time Elapsed: 500
+Thread ID: 22 Time Elapsed: 500
+Thread ID: 20 Time Elapsed: 500
+Thread ID: 23 Time Elapsed: 501
+Thread ID: 24 Time Elapsed: 500
+Thread ID: 25 Time Elapsed: 500
+Thread ID: 26 Time Elapsed: 500
+Thread ID: 27 Time Elapsed: 500
+Thread ID: 28 Time Elapsed: 500
+Thread ID: 29 Time Elapsed: 500
+Thread ID: 30 Time Elapsed: 501
+Thread ID: 31 Time Elapsed: 500
+Thread ID: 32 Time Elapsed: 500
+Thread ID: 33 Time Elapsed: 500
+Thread ID: 34 Time Elapsed: 500
+Thread ID: 35 Time Elapsed: 500
+Thread ID: 36 Time Elapsed: 500
+Thread ID: 37 Time Elapsed: 501
+Thread ID: 38 Time Elapsed: 500
+Thread ID: 39 Time Elapsed: 500
+Thread ID: 40 Time Elapsed: 500
+Thread ID: 41 Time Elapsed: 500
+Thread ID: 42 Time Elapsed: 503
+Thread ID: 64 Time Elapsed: 500
+Thread ID: 63 Time Elapsed: 500
+Thread ID: 65 Time Elapsed: 500
+Thread ID: 66 Time Elapsed: 500
+Thread ID: 67 Time Elapsed: 500
+Thread ID: 69 Time Elapsed: 500
+Thread ID: 68 Time Elapsed: 500
+Thread ID: 70 Time Elapsed: 500
+Thread ID: 72 Time Elapsed: 500
+Thread ID: 73 Time Elapsed: 500
+Thread ID: 74 Time Elapsed: 500
+Thread ID: 71 Time Elapsed: 500
+Thread ID: 61 Time Elapsed: 505
+Thread ID: 49 Time Elapsed: 507
+Thread ID: 46 Time Elapsed: 507
+Thread ID: 47 Time Elapsed: 507
+Thread ID: 48 Time Elapsed: 507
+Thread ID: 50 Time Elapsed: 507
+Thread ID: 51 Time Elapsed: 507
+Thread ID: 52 Time Elapsed: 507
+Thread ID: 58 Time Elapsed: 506
+Thread ID: 53 Time Elapsed: 507
+Thread ID: 59 Time Elapsed: 506
+Thread ID: 54 Time Elapsed: 506
+Thread ID: 60 Time Elapsed: 505
+Thread ID: 55 Time Elapsed: 505
+Thread ID: 56 Time Elapsed: 505
+Thread ID: 57 Time Elapsed: 505
+Thread ID: 43 Time Elapsed: 508
+Thread ID: 44 Time Elapsed: 508
+Thread ID: 45 Time Elapsed: 508
+Thread ID: 62 Time Elapsed: 507
+Thread ID: 15 Time Elapsed: 500
+Thread ID: 13 Time Elapsed: 500
+Thread ID: 12 Time Elapsed: 500
+Thread ID: 14 Time Elapsed: 500
+Thread ID: 18 Time Elapsed: 500
+Thread ID: 17 Time Elapsed: 500
+Thread ID: 16 Time Elapsed: 500
+Thread ID: 21 Time Elapsed: 501
+Thread ID: 19 Time Elapsed: 500
+Thread ID: 20 Time Elapsed: 500
+Thread ID: 23 Time Elapsed: 500
+Thread ID: 24 Time Elapsed: 500
+Thread ID: 22 Time Elapsed: 500
+Thread ID: 11 Time Elapsed: 500
+Thread ID: 25 Time Elapsed: 500
+Thread ID: 26 Time Elapsed: 500
+Thread ID: 27 Time Elapsed: 500
+Thread ID: 28 Time Elapsed: 500
+Thread ID: 29 Time Elapsed: 501
+Thread ID: 30 Time Elapsed: 500
+Thread ID: 31 Time Elapsed: 500
+Thread ID: 32 Time Elapsed: 500
+Thread ID: 33 Time Elapsed: 500
+Thread ID: 34 Time Elapsed: 500
+Thread ID: 35 Time Elapsed: 500
+Thread ID: 36 Time Elapsed: 500
+Thread ID: 37 Time Elapsed: 500
+Thread ID: 41 Time Elapsed: 502
+Thread ID: 39 Time Elapsed: 502
+Thread ID: 38 Time Elapsed: 502
+Thread ID: 40 Time Elapsed: 502
+Thread ID: 42 Time Elapsed: 500
+Thread ID: 63 Time Elapsed: 500
+Thread ID: 64 Time Elapsed: 500
+Thread ID: 66 Time Elapsed: 500
+Thread ID: 65 Time Elapsed: 501
+Thread ID: 67 Time Elapsed: 501
+Thread ID: 69 Time Elapsed: 500
+Thread ID: 68 Time Elapsed: 500
+Thread ID: 70 Time Elapsed: 500
+Thread ID: 72 Time Elapsed: 500
+Thread ID: 73 Time Elapsed: 500
+Thread ID: 74 Time Elapsed: 501
+Thread ID: 71 Time Elapsed: 500
+Thread ID: 61 Time Elapsed: 500
+Thread ID: 49 Time Elapsed: 500
+Thread ID: 46 Time Elapsed: 500
+Thread ID: 47 Time Elapsed: 500
+Thread ID: 48 Time Elapsed: 500
+Thread ID: 51 Time Elapsed: 500
+Thread ID: 52 Time Elapsed: 500
+Thread ID: 50 Time Elapsed: 500
+Thread ID: 59 Time Elapsed: 500
+Thread ID: 53 Time Elapsed: 500
+Thread ID: 58 Time Elapsed: 500
+Thread ID: 54 Time Elapsed: 501
+Thread ID: 56 Time Elapsed: 500
+Thread ID: 55 Time Elapsed: 500
+Thread ID: 43 Time Elapsed: 500
+Thread ID: 57 Time Elapsed: 500
+Thread ID: 60 Time Elapsed: 500
+Thread ID: 45 Time Elapsed: 500
+Thread ID: 44 Time Elapsed: 500
+Thread ID: 62 Time Elapsed: 500
+Thread ID: 15 Time Elapsed: 500
+Thread ID: 14 Time Elapsed: 500
+Thread ID: 17 Time Elapsed: 500
+Thread ID: 18 Time Elapsed: 501
+Thread ID: 19 Time Elapsed: 500
+Thread ID: 23 Time Elapsed: 500
+Thread ID: 24 Time Elapsed: 500
+Thread ID: 12 Time Elapsed: 500
+Thread ID: 25 Time Elapsed: 501
+Thread ID: 11 Time Elapsed: 501
+Thread ID: 27 Time Elapsed: 501
+Thread ID: 26 Time Elapsed: 501
+Thread ID: 22 Time Elapsed: 501
+Thread ID: 20 Time Elapsed: 500
+Thread ID: 31 Time Elapsed: 500
+Thread ID: 13 Time Elapsed: 501
+Thread ID: 21 Time Elapsed: 500
+Thread ID: 16 Time Elapsed: 500
+Thread ID: 33 Time Elapsed: 500
+Thread ID: 32 Time Elapsed: 500
+Thread ID: 30 Time Elapsed: 500
+Thread ID: 29 Time Elapsed: 500
+Thread ID: 28 Time Elapsed: 500
+Thread ID: 35 Time Elapsed: 500
+Thread ID: 36 Time Elapsed: 500
+Thread ID: 34 Time Elapsed: 500
+Thread ID: 37 Time Elapsed: 500
+Thread ID: 41 Time Elapsed: 500
+Thread ID: 39 Time Elapsed: 500
+Thread ID: 38 Time Elapsed: 501
+Thread ID: 40 Time Elapsed: 500
+Thread ID: 42 Time Elapsed: 500
+Thread ID: 63 Time Elapsed: 500
+Thread ID: 68 Time Elapsed: 500
+Thread ID: 69 Time Elapsed: 500
+Thread ID: 67 Time Elapsed: 500
+Thread ID: 66 Time Elapsed: 500
+Thread ID: 70 Time Elapsed: 500
+Thread ID: 64 Time Elapsed: 500
+Thread ID: 65 Time Elapsed: 500
+Thread ID: 72 Time Elapsed: 500
+Thread ID: 73 Time Elapsed: 500
+Thread ID: 74 Time Elapsed: 500
+Thread ID: 71 Time Elapsed: 501
+Thread ID: 61 Time Elapsed: 500
+Thread ID: 49 Time Elapsed: 500
+Thread ID: 46 Time Elapsed: 500
+Thread ID: 47 Time Elapsed: 500
+Thread ID: 48 Time Elapsed: 500
+Thread ID: 52 Time Elapsed: 501
+Thread ID: 51 Time Elapsed: 501
+Thread ID: 55 Time Elapsed: 500
+Thread ID: 59 Time Elapsed: 500
+Thread ID: 58 Time Elapsed: 500
+Thread ID: 60 Time Elapsed: 500
+Thread ID: 56 Time Elapsed: 500
+Thread ID: 53 Time Elapsed: 500
+Thread ID: 50 Time Elapsed: 500
+Thread ID: 43 Time Elapsed: 500
+Thread ID: 44 Time Elapsed: 500
+Thread ID: 57 Time Elapsed: 500
+Thread ID: 45 Time Elapsed: 500
+Thread ID: 54 Time Elapsed: 500
+Thread ID: 62 Time Elapsed: 500
+Thread ID: 17 Time Elapsed: 500
+Thread ID: 14 Time Elapsed: 500
+Thread ID: 18 Time Elapsed: 500
+Thread ID: 23 Time Elapsed: 500
+Thread ID: 15 Time Elapsed: 500
+Thread ID: 19 Time Elapsed: 500
+Thread ID: 24 Time Elapsed: 500
+Thread ID: 12 Time Elapsed: 500
+Thread ID: 11 Time Elapsed: 500
+Thread ID: 25 Time Elapsed: 500
+Thread ID: 27 Time Elapsed: 500
+Thread ID: 20 Time Elapsed: 500
+Thread ID: 31 Time Elapsed: 500
+Thread ID: 22 Time Elapsed: 500
+Thread ID: 26 Time Elapsed: 500
+Thread ID: 21 Time Elapsed: 501
+Thread ID: 13 Time Elapsed: 500
+Thread ID: 16 Time Elapsed: 500
+Thread ID: 35 Time Elapsed: 500
+Thread ID: 36 Time Elapsed: 500
+Thread ID: 34 Time Elapsed: 500
+Thread ID: 32 Time Elapsed: 500
+Thread ID: 33 Time Elapsed: 501
+Thread ID: 37 Time Elapsed: 500
+Thread ID: 28 Time Elapsed: 500
+Thread ID: 29 Time Elapsed: 500
+Thread ID: 30 Time Elapsed: 500
+Thread ID: 41 Time Elapsed: 500
+Thread ID: 38 Time Elapsed: 500
+Thread ID: 39 Time Elapsed: 501
+Thread ID: 40 Time Elapsed: 500
+Thread ID: 42 Time Elapsed: 501
+Thread ID: 63 Time Elapsed: 500
+Thread ID: 68 Time Elapsed: 500
+Thread ID: 66 Time Elapsed: 500
+Thread ID: 64 Time Elapsed: 501
+Thread ID: 67 Time Elapsed: 501
+Thread ID: 70 Time Elapsed: 501
+Thread ID: 65 Time Elapsed: 500
+Thread ID: 69 Time Elapsed: 501
+Thread ID: 72 Time Elapsed: 500
+Thread ID: 73 Time Elapsed: 500
+Thread ID: 74 Time Elapsed: 500
+Thread ID: 71 Time Elapsed: 500
+Thread ID: 49 Time Elapsed: 500
+Thread ID: 46 Time Elapsed: 500
+Thread ID: 47 Time Elapsed: 500
+Thread ID: 48 Time Elapsed: 501
+Thread ID: 52 Time Elapsed: 500
+Thread ID: 61 Time Elapsed: 501
+Thread ID: 51 Time Elapsed: 500
+Thread ID: 53 Time Elapsed: 500
+Thread ID: 56 Time Elapsed: 500
+Thread ID: 60 Time Elapsed: 500
+Thread ID: 58 Time Elapsed: 500
+Thread ID: 59 Time Elapsed: 500
+Thread ID: 44 Time Elapsed: 500
+Thread ID: 43 Time Elapsed: 501
+Thread ID: 55 Time Elapsed: 501
+Thread ID: 50 Time Elapsed: 501
+Thread ID: 57 Time Elapsed: 500
+Thread ID: 54 Time Elapsed: 500
+Thread ID: 62 Time Elapsed: 500
+Thread ID: 45 Time Elapsed: 500
+^Csg0440@cse02:~/4430/HW6/03$
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+
+sg0440@cse03:~/4430/HW5/2$ gcl
+GCL (GNU Common Lisp)  2.6.7 CLtL1    Feb  1 2012 09:07:26
+Source License: LGPL(gcl,gmp), GPL(unexec,bfd,xgcl)
+Binary License:  GPL due to GPL'ed components: (XGCL READLINE UNEXEC)
+Modifications of this banner must retain notice of a compatible license
+Dedicated to the memory of W. Schelter
+
+Use (help) to get some basic information on how to use GCL.
+Temporary directory for compiler files set to /tmp/
+
+>(load "MicroScala.lsp")
+
+Loading MicroScala.lsp
+Finished loading MicroScala.lsp
+T
+
+>(programSem
+   '(:
+     (:
+       (:
+         (:
+           (= (id x) (intValue 32)) (= (id y) (intValue 5)))
+           (= (id q) (intValue 0))) (= (id r) (id x)))
+           (while (>= (id r) (id y))
+             (:
+               (= (id q) (+ (id q) (intValue 1)))
+               (= (id r) (- (id r) (id y)))))))
+
+(LAMBDA (ID)
+  (COND
+    ((EQ ID 'R) 2)
+    ((EQ ID 'Q) 6)
+    ((EQ ID 'R) 7)
+    ((EQ ID 'Q) 5)
+    ((EQ ID 'R) 12)
+    ((EQ ID 'Q) 4)
+    ((EQ ID 'R) 17)
+    ((EQ ID 'Q) 3)
+    ((EQ ID 'R) 22)
+    ((EQ ID 'Q) 2)
+    ((EQ ID 'R) 27)
+    ((EQ ID 'Q) 1)
+    ((EQ ID 'R) 32)
+    ((EQ ID 'Q) 0)
+    ((EQ ID 'Y) 5)
+    ((EQ ID 'X) 32)
+    (T 'UNDEFINED)))
+
+>
+sg0440@cse03:~/4430/HW5/2$
